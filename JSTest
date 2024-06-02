@@ -12,15 +12,14 @@ function mintNFT(name, eyeColor, shirtType, bling) {
 
 function listNFTs() {
     nftCollection.forEach((nft, index) => {
-        console.log(#NFT ${index + 1}:);
-        console.log(Name: ${nft.name});
-        console.log(Eye Color: ${nft.eyeColor});
-        console.log(Shirt Type: ${nft.shirtType});
-        console.log(Bling: ${nft.bling});
+        console.log(`#NFT ${index + 1}:`);
+        console.log(`Name: ${nft.name}`);
+        console.log(`Eye Color: ${nft.eyeColor}`);
+        console.log(`Shirt Type: ${nft.shirtType}`);
+        console.log(`Bling: ${nft.bling}`);
         console.log('---------------------');
     });
 }
-
 
 function getTotalSupply() {
     return nftCollection.length;
@@ -28,7 +27,8 @@ function getTotalSupply() {
 
 mintNFT("Blockchaine", "Blue", "T-Shirt", "Gold Chain");
 mintNFT("Cybersecurity", "Green", "Hoodie", "Diamond Earring");
-mintNFT("metacafters", "Red", "Armor", "Ruby Amulet");
+mintNFT("Metacafters", "Red", "Armor", "Ruby Amulet");
 
 listNFTs();
 console.log("Total Supply: " + getTotalSupply());
+
