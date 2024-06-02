@@ -1,0 +1,34 @@
+let nftCollection = [];
+
+function mintNFT(name, eyeColor, shirtType, bling) {
+    const nft = {
+        name: name,
+        eyeColor: eyeColor,
+        shirtType: shirtType,
+        bling: bling
+    };
+    nftCollection.push(nft);
+}
+
+function listNFTs() {
+    nftCollection.forEach((nft, index) => {
+        console.log(#NFT ${index + 1}:);
+        console.log(Name: ${nft.name});
+        console.log(Eye Color: ${nft.eyeColor});
+        console.log(Shirt Type: ${nft.shirtType});
+        console.log(Bling: ${nft.bling});
+        console.log('---------------------');
+    });
+}
+
+
+function getTotalSupply() {
+    return nftCollection.length;
+}
+
+mintNFT("Blockchaine", "Blue", "T-Shirt", "Gold Chain");
+mintNFT("Cybersecurity", "Green", "Hoodie", "Diamond Earring");
+mintNFT("metacafters", "Red", "Armor", "Ruby Amulet");
+
+listNFTs();
+console.log("Total Supply: " + getTotalSupply());
