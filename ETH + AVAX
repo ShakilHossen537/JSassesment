@@ -1,0 +1,24 @@
+
+contract ExampleContract {
+    uint256 public number;
+
+    function setNumber(uint256 _number) public {
+        // Using require() to check if _number is greater than 0
+        require(_number > 0, "Number must be greater than 0");
+        number = _number;
+    }
+
+    function divideByTwo() public {
+        // Using assert() to check if number is even
+        assert(number % 2 == 0);
+        number = number / 2;
+    }
+
+    function revertExample(uint256 _number) public {
+        // Using revert() to check if _number is greater than 100
+        if (_number > 100) {
+            revert("Number must be less than or equal to 100");
+        }
+        number = _number;
+    }
+}
