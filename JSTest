@@ -1,11 +1,13 @@
 let nftCollection = [];
 
-function mintNFT(name, eyeColor, shirtType, bling) {
+function mintNFT(SrNo, name, Height, Subject, address, passoutYear) {
     const nft = {
+        SrNo: SrNo,
         name: name,
-        eyeColor: eyeColor,
-        shirtType: shirtType,
-        bling: bling
+        Height: Height, 
+        Subject: Subject,
+        address: address,
+        passoutYear: passoutYear
     };
     nftCollection.push(nft);
 }
@@ -13,10 +15,12 @@ function mintNFT(name, eyeColor, shirtType, bling) {
 function listNFTs() {
     nftCollection.forEach((nft, index) => {
         console.log(`#NFT ${index + 1}:`);
+        console.log(`SrNo: ${nft.SrNo}`);
         console.log(`Name: ${nft.name}`);
-        console.log(`Eye Color: ${nft.eyeColor}`);
-        console.log(`Shirt Type: ${nft.shirtType}`);
-        console.log(`Bling: ${nft.bling}`);
+        console.log(`Height: ${nft.Height}`);
+        console.log(`Subject: ${nft.Subject}`);
+        console.log(`Address: ${nft.address}`);
+        console.log(`Passout Year: ${nft.passoutYear}`);
         console.log('---------------------');
     });
 }
@@ -25,10 +29,11 @@ function getTotalSupply() {
     return nftCollection.length;
 }
 
-mintNFT("Blockchaine", "Blue", "T-Shirt", "Gold Chain");
-mintNFT("Cybersecurity", "Green", "Hoodie", "Diamond Earring");
-mintNFT("Metacafters", "Red", "Armor", "Ruby Amulet");
+mintNFT("01", "Shakil", "174 m", "Blockchain", "Chandigarh University", "2026");
+mintNFT("02", "Asif", "170 m", "Cybersecurity", "Chandigarh University", "2026");
+mintNFT("03", "Tanvir", "179 m", "Data Structure", "Chandigarh University", "2026");
+mintNFT("04", "Najmus", "184 m", "Database Management", "Chandigarh University", "2026");
+mintNFT("05", "Rubel", "176 m", "Machine Learning", "Chandigarh University", "2026");
 
 listNFTs();
 console.log("Total Supply: " + getTotalSupply());
-
